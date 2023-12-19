@@ -1,11 +1,11 @@
-FROM openjdk:8-alpine
+FROM openjdk:17-alpine
 
 # Setup useful environment variables
 ENV CONF_HOME     /var/atlassian/confluence
 ENV CONF_INSTALL  /opt/atlassian/confluence
 ENV CONF_VERSION  8.5.4
 
-ENV JAVA_CACERTS  $JAVA_HOME/jre/lib/security/cacerts
+ENV JAVA_CACERTS  $JAVA_HOME/lib/security/cacerts
 ENV CERTIFICATE   $CONF_HOME/certificate
 
 # Install Atlassian Confluence and helper tools and setup initial home
